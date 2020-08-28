@@ -1,0 +1,15 @@
+como adicionar coisas no seu proprio git:
+
+vai la no site do git
+crie um repositorio
+depois, no terminal, digite
+git clone *url do seu git que tem no site*
+ai vc troca os arquivos que mudou pelo navegador de arquivos
+depois vc digita
+git add .
+depois
+git commit -m "comentario sobre o commit"
+depois
+git push
+
+
