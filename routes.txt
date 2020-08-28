@@ -1,0 +1,13 @@
+// Routes
+
+// On your server:
+// const admin = require("./routes/admin"); // importing the router
+// app.use("/admin", admin); // using the file like a middleware
+
+// On the routes/admin.js file:
+// const express = require("express");
+// let router = express.Router();
+// module.exports = router;
+
+// On the routes/admin.js file, treat all routes as
+// preceded by /admin

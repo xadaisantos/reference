@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style type="text/css">
+        body {
+            font-family: monospace;
+            background-color: #313131;
+        }
+        #box {
+            margin-top: 50px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #box label {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        #box input {
+            padding: 7px;
+            box-sizing: border-box;
+            width: 420px;
+            display: block;
+        }
+
+        .cards {
+            font-weight: bold;
+            font-size: 36px;
+            margin: 15px 0 0 0;
+
+        }
+
+        .cards > div {
+            width: 420px;
+            box-sizing: border-box;
+            margin: 5px 0;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .cards .number {
+            font-size: 18px;
+        }
+
+        .cards .pounds {
+            background-color: #2299ff;
+            display: none;
+        }
+
+        .cards .ounces {
+            background-color: #22ff99;
+            display: none;
+        }
+
+        .cards .stones {
+            background-color: #ff9922;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+
+        <label>Weight Converter</label>
+        <input type="number" id="input" placeholder="Enter Kilograms..." name="" step>
+
+        <div class="cards">
+            <div class="pounds">
+                <div class="title">Pounds</div>
+                <div class="number">0</div>
+            </div>
+            <div class="ounces">
+                <div class="title">Ounces</div>
+                <div class="number">0</div>
+            </div>
+            <div class="stones">
+                <div class="title">Stones</div>
+                <div class="number">0</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        let input = document.getElementById("input");
+        let pounds = document.querySelector(".pounds .number");
+        let ounces = document.querySelector(".ounces .number");
+        let stones = document.querySelector(".stones .number");
+
+        let kiloToPounds = () => input.value * 2.2;
+        let kiloToOunces = () => input.value * 35.274;
+        let kiloToStones = () => input.value / 6.35;
+
+        let hiddenCards = (hidden) => {
+
+            let elements = [pounds, ounces, stones];
+
+            if (hidden === true){
+                elements.forEach((element) => element.parentElement.style.display = "none")
+            } else if (hidden === false){
+                elements.forEach((element) => element.parentElement.style.display = "block")
+            }
+        }
+
+        input.addEventListener("input", () => {
+            if (input.value == "" || input.value == 0){
+                hiddenCards(true);
+                pounds.textContent = "0";
+                ounces.textContent = "0";
+                stones.textContent = "0";
+            } else {
+                hiddenCards(false);
+                pounds.textContent = kiloToPounds();
+                ounces.textContent = kiloToOunces();
+                stones.textContent = kiloToStones();
+            }
+        });
+
+    </script>
+</body>
+</html>

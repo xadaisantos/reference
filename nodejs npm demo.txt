@@ -1,0 +1,15 @@
+// npm init // inicia o projeto, cria o package.json
+// npm install // in a package directory, install what's in the package.json
+// npm i express // install
+// npm i mysql // install
+// npm i nodemon -D // install as devDep
+// npm uninstall nodemon // uninstall
+// npm un nodemon // uninstall
+
+If you installed nodemon locally, go to package.json
+
+in "scripts", add a line:
+// "dev": "nodemon index.js"
+
+then, to run it:
+// npm run dev
