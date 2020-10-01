@@ -5,6 +5,7 @@ crie um repositorio
 depois, no terminal, digite
 git clone *url do seu git que tem no site*
 ai vc troca os arquivos que mudou pelo navegador de arquivos
+quando vc for subir as mudancas pro github, lembra de apagar node_modules
 depois vc digita
 git add .
 depois
