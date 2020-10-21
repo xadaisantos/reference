@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+header > * {
+    margin-bottom: 10px;
+}
+
+header h2 {
+    text-transform: uppercase;
+}
+
+header button, header input {
+    width: 150px;
+    padding: 5px;
+}
