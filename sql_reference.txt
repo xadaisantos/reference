@@ -18,6 +18,16 @@
 >>> \conninfo
 >>> \dt
 >>> SELECT datname FROM pg_database;
+>>> \du
+>>> \du+
+show databases:
+>>> \l
+>>> \l+
+connect to database (USE database):
+>>> \c databaseName
+show columns of a table in a connected database:
+>>> \d table
+>>> \d+ table
 
 --------------------------------------------- MYSQL
 
