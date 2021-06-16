@@ -6,7 +6,7 @@
 // npm uninstall nodemon // uninstall
 // npm un nodemon // uninstall
 
-If you have installed nodemon locally, go to package.json
+If you installed nodemon locally, go to package.json
 
 in "scripts", add a line:
 // "dev": "nodemon index.js"
