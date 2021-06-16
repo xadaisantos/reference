@@ -1,16 +1,58 @@
-como adicionar coisas no seu proprio git:
+Clones the project in the <url> to the <path>, default path is the working directory
+>>> git clone <url> <path>
 
-vai la no site do git
-crie um repositorio
-depois, no terminal, digite
-git clone *url do seu git que tem no site*
-ai vc troca os arquivos que mudou pelo navegador de arquivos
-quando vc for subir as mudancas pro github, lembra de apagar node_modules
-depois vc digita
-git add .
-depois
-git commit -m "comentario sobre o commit"
-depois
-git push
+Adds individual files to the staging area
+>>> git add file1.txt file2.txt
 
+Adds all files to the staging area
+>>> git add -A
 
+Checks which files are in the staging area (ready to be commited) and which are not
+>>> git status
+
+Saves the changes to the local repository
+>>> git commit -m "message about the commit"
+
+Saves the changes remotely
+>>> git push
+
+Visualizes the changes you've made
+>>> git diff
+
+Displays all branches
+>>> git branch -a
+
+Creates a branch
+>>> git branch branchName
+
+Switches to a branch to work on it
+>>> git checkout branchName
+
+While in a different branch, merges the branch you're in with the one you specify
+>>> git merge branchName
+
+Displays all merged branches
+>>> git branch --merged
+
+Deletes a branch locally
+>>> git branch -d branchName
+
+Deletes a branch remotelly
+>>> git push origin --delete branchName
+
+Pulls changes that were made while we were working (needs more explaining on arguments after 'pull')
+>>> git pull
+
+Possible workflow:
+>>> git clone <url>
+>>> git branch branchName
+...work...
+>>> git add -A
+>>> git commit -m "message"
+>>> git push -u origin branchName
+...when done with the branch... (study more later, this is still foggy)
+>>> git checkout master
+>>> git marge branchName
+>>> git push origin master
+>>> git branch -d branchName
+>>> git push origin --delete branchName
