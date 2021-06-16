@@ -22,7 +22,7 @@ Visualizes the changes you've made
 Displays all branches
 >>> git branch -a
 
-Creates a branch
+Creates a branch locally
 >>> git branch branchName
 
 Switches to a branch to work on it
@@ -31,13 +31,16 @@ Switches to a branch to work on it
 While in a different branch, merges the branch you're in with the one you specify
 >>> git merge branchName
 
+Pushes branch remotely
+>>> git push -u origin branchName
+
 Displays all merged branches
 >>> git branch --merged
 
 Deletes a branch locally
 >>> git branch -d branchName
 
-Deletes a branch remotelly
+Deletes a branch remotely
 >>> git push origin --delete branchName
 
 Pulls changes that were made while we were working (needs more explaining on arguments after 'pull')
