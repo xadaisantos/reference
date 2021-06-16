@@ -52,7 +52,7 @@ Possible workflow:
 >>> git push -u origin branchName
 ...when done with the branch... (study more later, this is still foggy)
 >>> git checkout master
->>> git marge branchName
+>>> git merge branchName
 >>> git push origin master
 >>> git branch -d branchName
 >>> git push origin --delete branchName
