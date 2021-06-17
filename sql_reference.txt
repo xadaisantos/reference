@@ -15,17 +15,25 @@
 
 --------------------------------------------- POSTGRES
 
+Show connection info:
 >>> \conninfo
+
+Display tables:
 >>> \dt
->>> SELECT datname FROM pg_database;
->>> \du
->>> \du+
-show databases:
+
+Display Databases:
 >>> \l
 >>> \l+
-connect to database (USE database):
+>>> SELECT datname FROM pg_database;
+
+Display users:
+>>> \du
+>>> \du+
+
+Connect to database (USE database):
 >>> \c databaseName
-show columns of a table in a connected database:
+
+Show columns of a table in a connected database:
 >>> \d table
 >>> \d+ table
 
