@@ -1,0 +1,65 @@
+>>> du -ha -d 1 | sort -h -r | head
+	du = disk usage
+	h = human readable
+	a = shows files too
+	d = depth
+	sort = sort output ascending
+	h = sort human readable
+	r = reverse
+	head = first 10 entries (-n <number> to change)
+
+>>> find . -type f -name "doc*.php" -size +100M -exec code {} +
+	find = searches files and directories
+	. = in the current folder (default)
+	-type f = only files (d for directories)
+	-name = name to search (-iname is case insensitive)
+	-size +100M = search for files 100M or greater in size
+	[+, -, G, M, k, c] = [greater than, lesser than, GB, MB, KB, B]
+	-exec = executes a command in the result of find
+	{} = placeholder for find results
+	+ = end of command line
+
+>>> grep <flags> "<pattern>" <file or folder>
+	grep = search for a pattern in files
+	<flags>
+		-w = exact pattern
+		-i = case insensitive
+		-r = recursive, in all subfolders
+		-l = displays files, not the occurences, overrides -c
+		-c = displays the count on each file
+		-P = allows pearl compatible regex to work
+		-n = displays the line of the occurences
+		-B = displays <arg> lines before, -B 3
+		-A = displays <arg> lines after, -A 3
+		-C = displays <arg> lines before and after, -C 3
+	<pattern> = text or regex
+	<file or folder> = normally files only, folder for recursive
+			   ./*.txt for only .txt files is possible
+
+>>> curl <url>
+	get request
+
+>>> curl -i <url>
+	get request + the header
+
+>>> curl -d "first=Xadai&last=Santos" <url>
+	post request, sends {'first': 'Xadai', 'last': 'Santos'}
+
+>>> curl -X PUT -d "first=Xadai&last=San" <url>
+	put request, sends {'first': 'Xadai', 'last': 'San'}
+
+>>> curl -X DELETE <url>
+	delete request
+
+>>> curl -u userName:password <url>
+	provides a user name and a password if a route requires authentication
+
+>>> curl -o fileName.extension <url>
+	downloads the response from a route
+
+Simple, yet powerful uses:
+	Find a file and then open it:
+	>>> find -type f -name "fileName" -exec code {} +
+
+	Find file by text:
+	>>> grep -r "text"
