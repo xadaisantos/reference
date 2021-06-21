@@ -1,0 +1,43 @@
+Run:
+sudo -u postgres psql
+
+Exit:
+\q
+
+Sets a new password to postgres user (it allows the creation of a server using this user):
+\password
+
+Uninstall:
+sudo apt-get --purge remove psql
+
+Connection Info:
+\conninfo
+
+Display tables:
+\dt
+
+Display Databases:
+\l
+\l+
+SELECT datname FROM pg_database;
+
+Display users:
+\du
+\du+
+
+Connect to database (USE database):
+\c databaseName
+
+Show columns of a table in a connected database:
+\d table
+\d+ table
+
+"Dump do banco"
+Acesse o psql
+Defina um password pro postgres user
+No pgAdmin:
+cria um server
+cria um database
+botao direito no database e restore
+escolhe o arquivo.sql
+espera

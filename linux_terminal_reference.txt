@@ -57,7 +57,7 @@
 >>> curl -o fileName.extension <url>
 	downloads the response from a route
 
-Simple, yet powerful uses:
+---------------------------------------- Simple, yet powerful uses:
 	Find a file and then open it:
 	>>> find -type f -name "fileName" -exec code {} +
 

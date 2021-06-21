@@ -1,0 +1,49 @@
+
+Run:
+mysql -u root -p 12345
+mysql -u xadaixgs -p 123xadai456
+
+Useful queries:
+show tables from databaseName;
+show databases;
+use databaseName;
+show columns from tableName;
+describe tableName;
+create table databaseName.tableName (nome VARCHAR(20), idade SMALLINT, altura FLOAT);
+insert into tableName (fieldOne, fieldTwo) VALUES (valueOne, valueTwo);
+// use '' for strings
+>>> insert into tableName (field) VALUES (entryOne), (entryTwo);
+
+Reset MySQL Password:
+stop server
+restart server
+connect to it
+run this to reload grant tables
+now, change password
+
+sudo /etc/init.d/mysql start
+sudo /usr/sbin/mysqld --skip-grant-tables --skip-networking &
+mysql -u root
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
+
+--------------------------------------------- GENERAL QUERIES
+
+>>> CREATE DATABASE nomeDoBanco;
+>>> CREATE DATABASE IF NOT EXISTS nomeDoBanco;
+
+>>> DROP DATABASE nomeDoBanco;
+>>> DROP DATABASE IF EXISTS nomeDoBanco;
+
+Join: o "ON" diz qual coluna conecta as duas tabelas.
+Join ou Inner Join: table_a ∩ table_b
+>>> SELECT [columns from both tables] FROM table_a LEFT JOIN table_b ON table_a.b_id = table_b.b_id
+
+Left Join: table_a + ( table_a ∩ table_b )
+>>> SELECT [columns from both tables] FROM table_a LEFT JOIN table_b ON table_a.b_id = table_b.b_id
+
+Right Join: table_b + ( table_a ∩ table_b )
+>>> SELECT [columns from both tables] FROM table_a RIGHT JOIN table_b ON table_a.b_id = table_b.b_id
+
+Full Join: table_a ∪ table_b
+>>> SELECT [columns from both tables] FROM table_a RIGHT JOIN table_b ON table_a.b_id = table_b.b_id

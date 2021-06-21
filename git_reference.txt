@@ -25,6 +25,12 @@ Displays all branches
 Creates a branch locally
 >>> git branch branchName
 
+Clones a single branch
+>>> git clone --single-branch --branch branchName <url>
+
+After you clone a repo, switches to one of its branches:
+>>> git checkout -b xadai-develop origin/xadai-develop (study later)
+
 Switches to a branch to work on it
 >>> git checkout branchName
 
