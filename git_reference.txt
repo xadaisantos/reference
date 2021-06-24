@@ -14,7 +14,7 @@ Saves the changes to the local repository
 >>> git commit -m "message about the commit"
 
 Saves the changes remotely
->>> git push
+>>> git push <repository> <branch>
 
 Visualizes the changes you've made
 >>> git diff
@@ -23,45 +23,47 @@ Displays all branches
 >>> git branch -a
 
 Creates a branch locally
->>> git branch branchName
+>>> git branch <branch>
 
 Clones a single branch
->>> git clone --single-branch --branch branchName <url>
+>>> git clone --single-branch --branch <branch> <url>
 
 After you clone a repo, switches to one of its branches:
 >>> git checkout -b xadai-develop origin/xadai-develop (study later)
 
 Switches to a branch to work on it
->>> git checkout branchName
+>>> git checkout <branch>
 
 While in a different branch, merges the branch you're in with the one you specify
->>> git merge branchName
+>>> git merge <branch>
 
 Pushes branch remotely
->>> git push -u origin branchName
+>>> git push -u origin <branch>
 
 Displays all merged branches
 >>> git branch --merged
 
 Deletes a branch locally
->>> git branch -d branchName
+>>> git branch -d <branch>
 
 Deletes a branch remotely
->>> git push origin --delete branchName
+>>> git push origin --delete <branch>
 
 Pulls changes that were made while we were working (needs more explaining on arguments after 'pull')
->>> git pull
+>>> git pull <repository> <branch>
 
 Possible workflow:
 >>> git clone <url>
->>> git branch branchName
+>>> git branch <branch>
+>>> git checkout <branch>
 ...work...
 >>> git add -A
 >>> git commit -m "message"
->>> git push -u origin branchName
+>>> git pull origin <branch>
+>>> git push -u origin <branch>
 ...when done with the branch... (study more later, this is still foggy)
 >>> git checkout master
->>> git merge branchName
+>>> git merge <branch>
 >>> git push origin master
->>> git branch -d branchName
->>> git push origin --delete branchName
+>>> git branch -d <branch>
+>>> git push origin --delete <branch>
