@@ -1,7 +1,9 @@
 
 Run:
-mysql -u root -p senha
-mysql -u xadaixgs -p senha
+mysql -u user -p senha
+
+Use file:
+mysql -u user -p dataBaseName < fileName.sql
 
 Useful queries:
 show tables from databaseName;
