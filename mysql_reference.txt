@@ -1,7 +1,7 @@
 
 Run:
-mysql -u root -p 12345
-mysql -u xadaixgs -p 123xadai456
+mysql -u root -p senha
+mysql -u xadaixgs -p senha
 
 Useful queries:
 show tables from databaseName;
